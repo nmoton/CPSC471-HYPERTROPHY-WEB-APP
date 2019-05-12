@@ -17,19 +17,23 @@ p, li a {
 }
 
 #masthead {
-        padding-top: 26.25vh;
-        height: 75vh;
-        padding-bottom: 26.25vh;
-        background-color: #ffffff;
+    padding-top: 26.25vh;
+    height: 75vh;
+    padding-bottom: 26.25vh;
+    background-color: #ffffff;
     }
+ 
+#masthead h3 {
+    padding-bottom: 3vh;
+}
 
-    #masthead h3 {
-        padding-bottom: 3vh;
-    }
+#footer-main h5 {
+    font-size: 1rem;
+}
 
-    #footer-main h5 {
-        font-size: 1rem;
-    }
+#footer-main {
+    margin-bottom: 1rem;
+}
 
 @media screen and (min-width: 300px) and (max-width: 499px) {
     h1 {
@@ -66,6 +70,10 @@ p, li a {
 
     #navbar-footer a{
         font-size: 0.75rem;
+    }
+
+    #footer-main {
+        margin-bottom: 0px;
     }
 }
 
