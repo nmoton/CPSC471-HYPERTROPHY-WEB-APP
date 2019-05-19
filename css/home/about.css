@@ -1,0 +1,189 @@
+﻿/* START OF GENERAL STYLING FOR PARAGRAPHS, AND LEAD: */
+
+html {
+    font-size: 16px;
+}
+
+p, li a {
+    font-size: 16px;
+}
+
+.lead {
+    font-size: 1rem;
+}
+
+/* END OF GENERAL STYLING FOR PARAGRAPHS, AND LEAD */
+
+/* START OF STYLING FOR THE NAVBAR: */
+.navbar {
+    background-color: #000000;
+    border-color: #000000;
+    font-family: 'Libre Franklin', sans-serif;
+    /* END OF DEFAULT STYLING FOR THE NAVBAR: */
+
+    /* START OF CUSTOM STYLING FOR THE NAVBAR: 
+    Feel free to add your own styling here for the navbar if necessary, but please keep the navbar generally consistent
+
+    */
+
+}
+
+/* START OF CUSTOM STYLING FOR DIFFERENT NAVBAR ELEMENTS: */
+
+
+/* END OF STYLING FOR THE NAVBAR */
+
+
+/* START OF STYLING FOR THE FOOTER (DO NOT CHANGE UNLESS NECESSARY): 
+Please keep the footer design consistent on all pages
+
+*/
+#footer-main h5 {
+    font-size: 1rem;
+}
+
+#footer-main {
+    background-color: #000000;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+}
+
+#footer-main h5 {
+    color: grey;
+}
+
+#footer-main a {
+    color: white;
+}
+
+#copyright {
+    color: white;
+}
+
+#navbar-footer {
+    font-size: 0.75rem;
+}
+
+#navbar-footer a {
+    font-size: 0.65rem;
+}
+/* END OF STYLING FOR THE FOOTER */
+
+
+/* PLACE CUSTOM STYLING ANYWHERE BELOW: */
+
+
+
+/* END OF CUSTOM STYLING */
+
+/* GENERAL STYLING FOR HEADER TEXT BASED ON SCREEN SIZE
+Feel free to add your own styling here so your design responds properly to different screen resolutions
+
+*/
+@media screen and (min-width: 300px) and (max-width: 499px) {
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+    #navbar-footer {
+        font-size: 0.65rem;
+    }
+
+    #navbar-footer a {
+        font-size: 0.65rem;
+    }
+
+}
+
+@media screen and (min-width: 499px) and (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px) {
+    h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.85rem;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.375rem;
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 999px) and (max-width:1249px) {
+
+}
+
+@media screen and (min-width: 1249px) and (max-width: 1499px) {
+
+}
+
+@media screen and (min-width: 1499px) and (max-width: 1749px) {
+
+}
+
+@media screen and (min-width: 1749px) and (max-width: 2149px) {
+
+}
+
+@media screen and (min-width: 2149px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* END OF GENERAL STYLING FOR HEADER TEXT BASED ON SCREEN SIZE */
