@@ -27,4 +27,8 @@ Please use the correct commands to push/pull to Github accordingly. Simply copy/
 
 ## Running Code
 
-For now while our website is static (no backend code yet, only front end code), you can simply view the website and all of its features by simply cloning this repo on your computer and opening index.html will work fine. I will release information on how to run a full website with backend code shortly.
+For now while our website is static (no backend code yet, only front end code), you can simply view the website and all of its features by simply cloning this repo on your computer and opening index.html. I will release information on how to run a full website with backend code shortly.
+
+## Copyright
+
+Please do not upload any copyrighted material to this repo unless the copyright holder permits use of their material.
