@@ -168,6 +168,10 @@ p, li a {
     .navbar.navbar-expand-md.navbar-light li a{
         color: white !important;
     }
+
+    #masthead h1 {
+        padding-top: 2.5vh;
+    }
 }
 
 @media screen and (min-width: 1249px) and (max-width: 1499px) {
@@ -183,6 +187,10 @@ p, li a {
 
     .navbar.navbar-expand-md.navbar-light li a{
         color: white !important;
+    }
+
+    #masthead h1 {
+        padding-top: 5.5vh;
     }
 }
 
@@ -200,6 +208,10 @@ p, li a {
     .navbar.navbar-expand-md.navbar-light li a{
         color: white !important;
     }
+
+    #masthead h1 {
+        padding-top: 7vh;
+    }
 }
 
 @media screen and (min-width: 1749px) and (max-width: 2149px) {
@@ -215,6 +227,10 @@ p, li a {
 
     .navbar.navbar-expand-md.navbar-light li a{
         color: white !important;
+    }
+
+    #masthead h1 {
+        padding-top: 7vh;
     }
 }
 
@@ -235,5 +251,9 @@ p, li a {
 
     .navbar.navbar-expand-md.navbar-light li a{
         color: white !important;
+    }
+
+    #masthead h1 {
+        padding-top: 7vh;
     }
 }
