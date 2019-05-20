@@ -11,16 +11,30 @@ p, li a {
 }
 
 .navbar {
-    background-color: #000000;
-    border-color: #000000;
-    font-family: 'Libre Franklin', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navbar.navbar-expand-md.navbar-light li a{
+    color: black !important;
+}
+
+.home {
+    background: transparent;
 }
 
 #masthead {
-    padding-top: 26.25vh;
-    height: 75vh;
-    padding-bottom: 26.25vh;
-    background-color: #ffffff;
+    height: auto;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+#masthead img {
+    height: auto;
+    width: 100%;
+}
+
+#masthead h1 {
+    font-family: 'Montserrat', sans-serif;
 }
  
 #masthead h3 {
@@ -59,23 +73,19 @@ p, li a {
 
 @media screen and (min-width: 300px) and (max-width: 499px) {
     h1 {
-        font-size: 1.8rem;
-        text-align: center;
+        font-size: 1.6rem;
     }
 
     h2 {
         font-size: 1.4rem;
-        text-align: center;
     }
 
     h3 {
         font-size: 1rem;
-        text-align: center;
     }
 
     h4 {
         font-size: 1rem;
-        text-align: center;
     }
 
     h5 {
@@ -99,70 +109,131 @@ p, li a {
 @media screen and (min-width: 499px) and (max-width: 768px) {
     h1 {
         font-size: 2rem;
-        text-align: center;
     }
 
     h2 {
         font-size: 1.5rem;
-        text-align: center;
     }
 
     h3 {
         font-size: 1.25rem;
-        text-align: center;
     }
 
     h4 {
         font-size: 1rem;
-        text-align: center;
     }
 
     h5 {
         font-size: 1rem;
     }
 
+    .navbar.navbar-expand-md.navbar-light li a{
+    color: black !important;
+}
+
 }
 
 @media screen and (min-width: 768px) and (max-width: 999px) {
     h1 {
-        font-size: 2.5rem;
-        text-align: center;
+        font-size: 2.0rem;
     }
 
     h2 {
         font-size: 1.85rem;
-        text-align: center;
     }
 
     h3 {
         font-size: 1.375rem;
-        text-align: center;
     }
 
     h4 {
         font-size: 1rem;
-        text-align: center;
     }
 }
 
-@media screen and (min-width: 999px) and (max-width:1249px) {
+.navbar.navbar-expand-md.navbar-light li a{
+    color: black !important;
+}
 
+@media screen and (min-width: 999px) and (max-width:1249px) {
+    body {
+        background-color: #ffffff;
+        background-image: url("../resources/background.png");
+        background-repeat: no-repeat;
+        background-position: right center;
+        top: 0px;
+        left: 0px;
+    }
+
+    .navbar.navbar-expand-md.navbar-light li a{
+        color: white !important;
+    }
 }
 
 @media screen and (min-width: 1249px) and (max-width: 1499px) {
+    body {
+        background-color: #ffffff;
+        background-image: url("../resources/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+        top: 0px;
+        left: 0px;
+    }
 
+    .navbar.navbar-expand-md.navbar-light li a{
+        color: white !important;
+    }
 }
 
 @media screen and (min-width: 1499px) and (max-width: 1749px) {
+    body {
+        background-color: #ffffff;
+        background-image: url("../resources/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+        top: 0px;
+        left: 0px;
+    }
 
+    .navbar.navbar-expand-md.navbar-light li a{
+        color: white !important;
+    }
 }
 
 @media screen and (min-width: 1749px) and (max-width: 2149px) {
+    body {
+        background-color: #ffffff;
+        background-image: url("../resources/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+        top: 0px;
+        left: 0px;
+    }
 
+    .navbar.navbar-expand-md.navbar-light li a{
+        color: white !important;
+    }
 }
 
 @media screen and (min-width: 2149px) {
+    body {
+        background-color: #ffffff;
+        background-image: url("../resources/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: right center;
+        top: 0px;
+        left: 0px;
+    }
+
     html {
         font-size: 16px;
+    }
+
+    .navbar.navbar-expand-md.navbar-light li a{
+        color: white !important;
     }
 }
