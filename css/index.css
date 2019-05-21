@@ -33,6 +33,39 @@ p, li a {
     width: 100%;
 }
 
+#what {
+    text-align: center;
+    padding-bottom: 10vh;
+    padding-left: 7.5vh;
+    padding-right: 7.5vh;
+}
+
+#what h1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#features {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#features img {
+    text-align: center;
+    height: auto;
+    width: 60%;
+}
+
+.features {
+    display: flex;
+}
+
+#getStarted {
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+    padding-left: 12.5vh;
+    padding-right: 12.5vh;
+}
+
 #masthead h1 {
     font-family: 'Montserrat', sans-serif;
 }
@@ -71,7 +104,7 @@ p, li a {
     font-size: 0.65rem;
 }
 
-@media screen and (min-width: 300px) and (max-width: 499px) {
+@media screen and (min-width: 0px) and (max-width: 499px) {
     h1 {
         font-size: 1.6rem;
     }
@@ -93,7 +126,11 @@ p, li a {
     }
 
     #masthead {
-        height: 100vh;
+        text-align: center;
+    }
+
+    #masthead img {
+        padding-bottom: 5vh;
     }
 
     #navbar-footer {
@@ -128,8 +165,24 @@ p, li a {
     }
 
     .navbar.navbar-expand-md.navbar-light li a{
-    color: black !important;
-}
+        color: black !important;
+    }
+
+    #masthead {
+        text-align: center;
+    }
+
+    #masthead img {
+        padding-bottom: 5vh;
+    }
+
+    #navbar-footer {
+        font-size: 0.65rem;
+    }
+
+    #navbar-footer a {
+        font-size: 0.65rem;
+    }
 
 }
 
@@ -159,8 +212,9 @@ p, li a {
     body {
         background-color: #ffffff;
         background-image: url("../resources/background.png");
+        background-size: auto;
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: top;
         top: 0px;
         left: 0px;
     }
@@ -170,7 +224,7 @@ p, li a {
     }
 
     #masthead h1 {
-        padding-top: 2.5vh;
+        padding-top: 4vh;
     }
 }
 
@@ -178,9 +232,9 @@ p, li a {
     body {
         background-color: #ffffff;
         background-image: url("../resources/background.png");
-        background-size: cover;
+        background-size: auto;
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: top;
         top: 0px;
         left: 0px;
     }
@@ -198,9 +252,9 @@ p, li a {
     body {
         background-color: #ffffff;
         background-image: url("../resources/background.png");
-        background-size: cover;
+        background-size: auto;
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: top;
         top: 0px;
         left: 0px;
     }
@@ -218,9 +272,9 @@ p, li a {
     body {
         background-color: #ffffff;
         background-image: url("../resources/background.png");
-        background-size: cover;
+        background-size: auto;
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: top;
         top: 0px;
         left: 0px;
     }
@@ -240,7 +294,7 @@ p, li a {
         background-image: url("../resources/background.png");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: right center;
+        background-position: top;
         top: 0px;
         left: 0px;
     }
