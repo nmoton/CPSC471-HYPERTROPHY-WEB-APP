@@ -67,137 +67,155 @@
 		To do:
 		- Make search bar functional, haven't added form yet b/c styling is messed up
 		- Add actual questions (feel like I'll have a better idea once we work more on project)
+		- Add php file
+
 	-->
+	
 	<div>
-		<br>
-		<h1 align="center">How can we help you?</h1>
 
-		<center>
-			<input type="text" placeholder="Search..." name="search">
-			<button type="submit"><i class="fa fa-search"></i></button>
-		</center>
-		<br>
-
-		<div class="container">
-			<h1 align="left">FAQ</h1><br>
-
-			<ul align="left">
-				<li>Question 1
-					<ul>
-						<li>Answer</li>
-					</ul>
-				</li><br>
-				<li>Question 2
-					<ul>
-						<li>Answer</li>
-					</ul><br>
-				<li>Question 3
-					<ul>
-						<li>Answer</li>
-					</ul><br>
-			</ul>
-
-		</div>
-
-		<br>
-		<div class="container">
-			<h1 align="left">Contact Us</h1>
-
-			<p>Have any questions? Send us an email with the form below and we'll get back to you as soon as
-				possible!</p><br>
-
-			<form action="mailto:someone@example.com" method="post">
-				Name:<br>
-				<input type="text" name="name"><br>
-				E-mail:<br>
-				<input type="text" name="mail"><br>
-				Question:<br>
-				<textarea name="text" rows="10" cols="50"></textarea><br><br>
-				<input type="submit" value="Send">
-				<input type="reset" value="Reset">
-			</form><br>
-		</div>
-
-
-
-	</div>
-
-	<!---START OF FOOTER -- LEAVE DEFAULT UNLESS YOU HAVE REASON TO CHANGE-->
-	<footer class="page-footer font-small" id="footer-main">
-		<div class="container text-center text-md-left">
-			<div class="row">
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-					<h5>HYPERTROPHY LOGO</h5>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-					<h5>COMPANY</h5>
-					<ul class="list-unstyled">
-						<li>
-							<a href="#">Who Are We?</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
-					<h5>USEFUL LINKS</h5>
-					<ul class="list-unstyled">
-						<li>
-							<a href="#">Help</a>
-						</li>
-						<li>
-							<a href="#">Legal</a>
-						</li>
-					</ul>
-				</div>
-				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" id="footer-media">
-					<a href="https://github.com/nmoton/CPSC471-HYPERTROPHY-WEB-APP">
-						<i class="fab fa-github-square fa-3x"></i>
-					</a>
-					<a href="https://www.youtube.com/channel/UCjLEuqhcK5_FX4xh4D0y0zA">
-						<i class="fab fa-youtube-square fa-3x"></i>
-					</a>
-					<a href="mailto:nathan.moton@ucalgary.ca">
-						<i class="fas fa-envelope-square fa-3x"></i>
-					</a>
+		<div class="container" id="search">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<br>
+				<h1 align="center">How can we help you?</h1>
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="Search...">
+					<div class="input-group-append">
+						<button class="btn btn-secondary" type="button">
+							<i class="fa fa-search"></i>
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container" id="navbar-footer">
-			<nav class="nav navbar-expand">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item">
-						<a class="nav-link" href="#">Privacy</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">Legal</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">TBF</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">TBF</a>
-					</li>
+
+		<div class="container" id="faq">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<br>
+				<h1 align="left">FAQ</h1><br>
+				<ul align="left">
+					<li>Question 1
+						<ul>
+							<li>Answer</li>
+						</ul>
+					</li><br>
+					<li>Question 2
+						<ul>
+							<li>Answer</li>
+						</ul><br>
+					<li>Question 3
+						<ul>
+							<li>Answer</li>
+						</ul><br>
 				</ul>
-				<span class="navbar-text" id="copyright">
-					© 2019 N. MOTON, M. CARLOS, M.PICAZO
-				</span>
-			</nav>
+			</div>
 		</div>
-	</footer>
-	<!---END OF FOOTER-->
 
-	<!---JS AND JQUERY SCRIPTS-->
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
-		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-		integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-		crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-		integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-		crossorigin="anonymous"></script>
-	<script src="../../js/global.js"></script>
+		<br>
+		<div class="container" id="contact">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<h1 align="left">Contact Us</h1>
+				<p>Have any questions? Send us an email with the form below and we'll get back to you as soon as
+					possible!</p><br>
 
-	<!--CUSTOM JS AND JQUERY SCRIPTS-->
-	<script src="../../js/home/help.js"></script>
+				<div class="form-group row">
+					<form action="mailto:someone@example.com" method="post">
+
+						<div class="col-xs-4">
+							<label for="form_name">Name: </label><br>
+							<input id="form_name" input type="text" name="name" class="form-control"><br>
+						</div>
+
+						<div class="col-xs-4">
+							<label for="form_email">Email: </label><br>
+							<input id="form_email" input type="text" name="name" class="form-control"><br>
+						</div>
+
+						<label for="form_message">Message: </label><br>
+						<textarea id="form_message" name="message" class="form-control" rows="8" cols="30"></textarea><br>
+
+						<input type="submit" value="Send">
+						<input type="reset" value="Reset">
+					</form><br>
+				</div>
+			</div>
+		</div>
+
+		<!---START OF FOOTER -- LEAVE DEFAULT UNLESS YOU HAVE REASON TO CHANGE-->
+		<footer class="page-footer font-small" id="footer-main">
+			<div class="container text-center text-md-left">
+				<div class="row">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<h5>HYPERTROPHY LOGO</h5>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<h5>COMPANY</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a href="#">Who Are We?</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+						<h5>USEFUL LINKS</h5>
+						<ul class="list-unstyled">
+							<li>
+								<a href="#">Help</a>
+							</li>
+							<li>
+								<a href="#">Legal</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" id="footer-media">
+						<a href="https://github.com/nmoton/CPSC471-HYPERTROPHY-WEB-APP">
+							<i class="fab fa-github-square fa-3x"></i>
+						</a>
+						<a href="https://www.youtube.com/channel/UCjLEuqhcK5_FX4xh4D0y0zA">
+							<i class="fab fa-youtube-square fa-3x"></i>
+						</a>
+						<a href="mailto:nathan.moton@ucalgary.ca">
+							<i class="fas fa-envelope-square fa-3x"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="container" id="navbar-footer">
+				<nav class="nav navbar-expand">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="#">Privacy</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Legal</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">TBF</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">TBF</a>
+						</li>
+					</ul>
+					<span class="navbar-text" id="copyright">
+						© 2019 N. MOTON, M. CARLOS, M.PICAZO
+					</span>
+				</nav>
+			</div>
+		</footer>
+		<!---END OF FOOTER-->
+
+		<!---JS AND JQUERY SCRIPTS-->
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+			integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+			integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+			integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+			crossorigin="anonymous"></script>
+		<script src="../../js/global.js"></script>
+
+		<!--CUSTOM JS AND JQUERY SCRIPTS-->
+		<script src="../../js/home/help.js"></script>
 </body>
 
 </html>
