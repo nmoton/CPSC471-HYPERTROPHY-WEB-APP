@@ -121,17 +121,20 @@
 					<form action="mailto:someone@example.com" method="post">
 
 						<div class="col-xs-4">
-							<label for="form_name">Name: </label><br>
-							<input id="form_name" input type="text" name="name" class="form-control"><br>
+							<label for="form_name">Name: *</label><br>
+							<input id="form_name" input type="text" name="name" class="form-control" required="required" data-error="Name is required."><br>
+							<div class="help-block with-errors"></div>
 						</div>
 
 						<div class="col-xs-4">
-							<label for="form_email">Email: </label><br>
-							<input id="form_email" input type="text" name="name" class="form-control"><br>
+							<label for="form_email">Email: *</label><br>
+							<input id="form_email" input type="email" name="name" class="form-control" required="required" data-error="Email is required."><br>
+							<div class="help-block with-errors"></div>
 						</div>
 
-						<label for="form_message">Message: </label><br>
-						<textarea id="form_message" name="message" class="form-control" rows="8" cols="30"></textarea><br>
+						<label for="form_message">Message: *</label><br>
+						<textarea id="form_message" name="message" class="form-control" required="required" data-error="Message is required." rows="8" cols="30"></textarea><br>
+						<div class="help-block with-errors"></div>
 
 						<input type="submit" value="Send">
 						<input type="reset" value="Reset">
