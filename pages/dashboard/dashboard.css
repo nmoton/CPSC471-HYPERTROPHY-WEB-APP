@@ -1,6 +1,19 @@
+.navbar {
+}
+
+.navbar.navbar-expand-md.navbar-light li a{
+    color: black !important;
+    font-size: 1.05rem;
+}
+
+#navbarSupportedContent {
+	text-align: right;
+}
+
 #search {
 	max-width: 75%;
 }
 
-
-#basic-text1 {}
+#test {
+	height: 600px;
+}
