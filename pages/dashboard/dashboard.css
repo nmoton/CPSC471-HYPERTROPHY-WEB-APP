@@ -1,7 +1,4 @@
-.navbar {
-}
-
-.navbar.navbar-expand-md.navbar-light li a{
+.navbar.navbar-expand-lg.navbar-light li a{
     color: black !important;
     font-size: 1.05rem;
 }
@@ -16,4 +13,50 @@
 
 #test {
 	height: 600px;
+}
+
+@media screen and (min-width: 0px) and (max-width: 499px) {
+
+}
+
+@media screen and (min-width: 499px) and (max-width: 768px) {
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+
+}
+
+@media screen and (min-width: 992px) and (max-width:1249px) {
+ 	#search {
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 1249px) and (max-width: 1499px) {
+  	#search {
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 1499px) and (max-width: 1749px) {
+ 	#search {
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 1749px) and (max-width: 2149px) {
+ 	#search {
+		max-width: 50%;
+	}
+}
+
+@media screen and (min-width: 2149px) {
+	 #search {
+		max-width: 50%;
+	}
+	
+    html {
+        font-size: 16px;
+    }
 }
