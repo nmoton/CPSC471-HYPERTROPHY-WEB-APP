@@ -1,4 +1,4 @@
-.navbar.navbar-expand-lg.navbar-light li a{
+.navbar.navbar-expand-lg.navbar-dark li a{
     color: whitesmoke !important;
     font-size: 1.05rem;
 }
@@ -42,6 +42,10 @@
 
 #dashboard-post {
 	margin-bottom: 25px;
+}
+
+h4 {
+	color:white !important;
 }
 
 h5 {
