@@ -3,6 +3,10 @@
     font-size: 1.05rem;
 }
 
+.navbar {
+	background-color: white;
+}
+
 #navbarSupportedContent {
 	text-align: right;
 }
@@ -14,6 +18,16 @@
 #test {
 	height: 600px;
 }
+
+#dashboard-post {
+	margin-top: 60px;
+}
+
+h6 {
+    font-size: 0.8rem;
+
+}
+
 
 @media screen and (min-width: 0px) and (max-width: 499px) {
 
@@ -55,7 +69,7 @@
 	 #search {
 		max-width: 50%;
 	}
-	
+
     html {
         font-size: 16px;
     }
