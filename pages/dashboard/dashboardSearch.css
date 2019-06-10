@@ -1,0 +1,28 @@
+.fixed-top-2 {
+    margin-top: 56px;
+    color: white;
+}
+
+.navbar.navbar-expand-lg.navbar-dark p{
+    color: whitesmoke !important;
+    font-size: 1.05rem;
+
+}
+
+.navbar-text {
+	text-align: center
+}
+
+.navbar .navbar-nav .fixed-top-2{
+    display: inline-block;
+    float: none;
+}
+
+#back {
+	position: absolute;
+}
+
+#search-result-area {
+	margin-top: 125px;
+	margin-bottom: 125px;
+}
