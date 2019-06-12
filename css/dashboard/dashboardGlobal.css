@@ -41,6 +41,19 @@
 	font-family: 'Montserrat', sans-serif;
 }
 
+h4 {
+	color:white !important;
+}
+
+h5 {
+	color: #1261a0;
+}
+
+h6 {
+    font-size: 0.8rem;
+    color: #1f1f1f;
+}
+
 /* Global dashboard navbar search bar styling */
 
 @media screen and (min-width: 0px) and (max-width: 499px) {
