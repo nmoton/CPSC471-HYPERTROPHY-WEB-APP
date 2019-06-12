@@ -22,11 +22,11 @@
 	position: absolute;
 }
 
-#dashboard-post-area {
-	margin-top: 125px;
-	margin-bottom: 125px;
-}
-
 #user-banner {
     margin-top: 125px;
+}
+
+#profile-post {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
