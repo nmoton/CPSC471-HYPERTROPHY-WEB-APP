@@ -1,0 +1,15 @@
+/* Global CSS file for all dashboard pages that contain the back button in the second navbar */
+
+.fixed-top-2 {
+    margin-top: 56px;
+    color: white;
+}
+
+.navbar .navbar-nav .fixed-top-2{
+    display: inline-block;
+    float: none;
+}
+
+#back {
+	position: absolute;
+}
