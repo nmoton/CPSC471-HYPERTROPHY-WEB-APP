@@ -6,3 +6,25 @@
     margin-top: 25px;
     margin-bottom: 25px;
 }
+
+#user-name {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#user-about p {
+	margin-bottom: 2.5px;
+}
+
+#user-name h6 {
+	font-size: 0.8rem;
+	margin-bottom: 10px;
+}
+
+#user-social button {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+hr {
+	margin-bottom: 25px;
+}
