@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2019 at 07:57 PM
+-- Generation Time: Jun 13, 2019 at 10:58 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `UserID` int(11) NOT NULL,
+  `userID_fk` int(11) NOT NULL,
   `AuthenticityLevel` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -40,8 +40,8 @@ CREATE TABLE `admin` (
 --
 
 CREATE TABLE `community` (
-  `userID` int(11) NOT NULL,
-  `postID` int(11) NOT NULL
+  `userID_fk` int(11) NOT NULL,
+  `postID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -57,7 +57,7 @@ CREATE TABLE `exercise` (
   `reps` int(11) NOT NULL,
   `weight` int(11) NOT NULL,
   `RPE` int(11) NOT NULL,
-  `workoutID` int(11) NOT NULL
+  `workoutID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -68,9 +68,9 @@ CREATE TABLE `exercise` (
 
 CREATE TABLE `personal_record` (
   `personalRecordID` int(11) NOT NULL,
-  `exerciseID` int(11) NOT NULL,
-  `workoutID` int(11) NOT NULL,
-  `prListID` int(11) NOT NULL
+  `exerciseID_fk` int(11) NOT NULL,
+  `workoutID_fk` int(11) NOT NULL,
+  `prList_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -81,10 +81,10 @@ CREATE TABLE `personal_record` (
 
 CREATE TABLE `post` (
   `postID` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `prID` int(11) NOT NULL,
-  `workoutID` int(11) NOT NULL,
-  `personalWallID` int(11) NOT NULL
+  `userID_fk` int(11) NOT NULL,
+  `prID_fk` int(11) NOT NULL,
+  `workoutID_fk` int(11) NOT NULL,
+  `personalWallID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -94,7 +94,7 @@ CREATE TABLE `post` (
 --
 
 CREATE TABLE `standard_user` (
-  `userID` int(11) NOT NULL,
+  `userID_fk` int(11) NOT NULL,
   `personalWallID` int(11) NOT NULL,
   `workoutListID` int(11) NOT NULL,
   `prListID` int(11) NOT NULL
@@ -131,7 +131,7 @@ CREATE TABLE `workout` (
   `wYear` int(11) NOT NULL,
   `wTime` int(11) NOT NULL,
   `privacy` text NOT NULL,
-  `workoutlistID` int(11) NOT NULL
+  `workoutListID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -139,31 +139,52 @@ CREATE TABLE `workout` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD KEY `userID_fk` (`userID_fk`);
+
+--
+-- Indexes for table `community`
+--
+ALTER TABLE `community`
+  ADD KEY `userID_fk` (`userID_fk`),
+  ADD KEY `postID_fk` (`postID_fk`);
+
+--
 -- Indexes for table `exercise`
 --
 ALTER TABLE `exercise`
-  ADD PRIMARY KEY (`exerciseID`);
+  ADD PRIMARY KEY (`exerciseID`),
+  ADD KEY `workoutID_fk` (`workoutID_fk`);
 
 --
 -- Indexes for table `personal_record`
 --
 ALTER TABLE `personal_record`
-  ADD PRIMARY KEY (`personalRecordID`);
+  ADD PRIMARY KEY (`personalRecordID`),
+  ADD KEY `exerciseID_fk` (`exerciseID_fk`),
+  ADD KEY `workoutID_fk` (`workoutID_fk`),
+  ADD KEY `prList_fk` (`prList_fk`);
 
 --
 -- Indexes for table `post`
 --
 ALTER TABLE `post`
-  ADD PRIMARY KEY (`postID`);
+  ADD PRIMARY KEY (`postID`),
+  ADD KEY `userID_fk` (`userID_fk`),
+  ADD KEY `prID_fk` (`prID_fk`),
+  ADD KEY `workoutID_fk` (`workoutID_fk`),
+  ADD KEY `personalWallID_fk` (`personalWallID_fk`);
 
 --
 -- Indexes for table `standard_user`
 --
 ALTER TABLE `standard_user`
-  ADD PRIMARY KEY (`userID`),
   ADD UNIQUE KEY `UNIQUE1` (`personalWallID`),
   ADD UNIQUE KEY `UNIQUE2` (`workoutListID`),
-  ADD UNIQUE KEY `UNIQUE3` (`prListID`);
+  ADD UNIQUE KEY `UNIQUE3` (`prListID`),
+  ADD KEY `userID_fk` (`userID_fk`);
 
 --
 -- Indexes for table `user`
@@ -175,7 +196,8 @@ ALTER TABLE `user`
 -- Indexes for table `workout`
 --
 ALTER TABLE `workout`
-  ADD PRIMARY KEY (`workoutID`);
+  ADD PRIMARY KEY (`workoutID`),
+  ADD KEY `workoutListID` (`workoutListID_fk`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -200,12 +222,6 @@ ALTER TABLE `post`
   MODIFY `postID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `standard_user`
---
-ALTER TABLE `standard_user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
@@ -216,6 +232,58 @@ ALTER TABLE `user`
 --
 ALTER TABLE `workout`
   MODIFY `workoutID` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `community`
+--
+ALTER TABLE `community`
+  ADD CONSTRAINT `community_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `community_ibfk_2` FOREIGN KEY (`postID_fk`) REFERENCES `post` (`postID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `exercise`
+--
+ALTER TABLE `exercise`
+  ADD CONSTRAINT `exercise_ibfk_1` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `personal_record`
+--
+ALTER TABLE `personal_record`
+  ADD CONSTRAINT `personal_record_ibfk_1` FOREIGN KEY (`exerciseID_fk`) REFERENCES `exercise` (`exerciseID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `personal_record_ibfk_2` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `personal_record_ibfk_3` FOREIGN KEY (`prList_fk`) REFERENCES `standard_user` (`prListID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `post`
+--
+ALTER TABLE `post`
+  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_ibfk_2` FOREIGN KEY (`prID_fk`) REFERENCES `personal_record` (`personalRecordID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_ibfk_3` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_ibfk_4` FOREIGN KEY (`personalWallID_fk`) REFERENCES `standard_user` (`personalWallID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `standard_user`
+--
+ALTER TABLE `standard_user`
+  ADD CONSTRAINT `standard_user_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `workout`
+--
+ALTER TABLE `workout`
+  ADD CONSTRAINT `workout_ibfk_1` FOREIGN KEY (`workoutListID_fk`) REFERENCES `standard_user` (`workoutListID`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
