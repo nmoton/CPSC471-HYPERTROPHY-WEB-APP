@@ -1,9 +1,15 @@
-#addExercise {
+#addExerciseCard {
 	margin-top: 125px;
 }
 
-#workoutTable {
+#workoutTableCard {
 	margin-top: 15px;
 	margin-bottom: 15px;
 }
+
+#workoutTable {
+	margin: 0 auto;
+}
+
+
 
