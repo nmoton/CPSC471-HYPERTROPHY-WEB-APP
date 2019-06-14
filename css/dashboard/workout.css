@@ -1,0 +1,33 @@
+#user-banner {
+    margin-top: 125px;
+}
+
+#user-banner p {
+	margin-bottom: 2.5px;
+}
+
+#user-banner h6 {
+	font-size: 0.8rem;
+}
+
+#user-name {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#workout-name {
+	font-family: 'Montserrat', sans-serif;
+}
+
+.list-group {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#exerciseList p {
+	margin-bottom: 2.5px;
+}
+
+#exercise h5 {
+	font-family: 'Montserrat', sans-serif;
+} 
+
