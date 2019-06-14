@@ -60,7 +60,27 @@
         </div>
     </nav>
 
-    <div class="container">
+    <div class="container" id="addExercise">
+        <form class="form-exercise">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" name="exercise" id="addExerciseInput" placeholder="Exercise Name" required="" autofocus=""/>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" name="weight" id="addExerciseInput" placeholder="Weight (lbs)" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" name="sets" id="addExerciseInput" placeholder="Sets" />
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <input type="text" class="form-control" name="reps" id="addExerciseInput" placeholder="Reps" />
+                </div>
+            </div>
+        </form>
+        <button class="btn btn-md btn-primary btn-block" onclick="addWorkout();">Add Exercise</button>
+    </div>
+
+    <div class="container" id="workoutTable">
         <table class="table">
             <thead>
                 <tr>
