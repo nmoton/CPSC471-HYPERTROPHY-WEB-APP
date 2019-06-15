@@ -1,3 +1,5 @@
+<!--https://www.webslesson.info/2016/03/ajax-live-data-search-using-jquery-php-mysql.html-->
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -24,7 +26,7 @@
         </ul>
         <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">'000'</a>
+                <!--<a class="nav-link" href="#">'000'</a>-->
             </li>
         </ul>
     </div>
@@ -59,11 +61,9 @@
             </div>
         </div>
     </nav>
-
-
-                
-    <!--maybe just put the result in the line below though-->
+       
         
+
         <div class="container" id="dashboard-post">
             <div class="card">
                 <div class="card-header">
@@ -75,44 +75,44 @@
                 </div>
             </div>
         </div>
+        <!--This is where the result from the Ajax script appears, need to change the location of this
+            later but for sake of demonstrating functionality, this is fine-->
         <div id = "result"></div>
     </div>
+
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+<!--Ajax script for accessing the users that have been searched, don't change this.-->
    <script>
-$(document).ready(function(){
+    $(document).ready(function(){
 
- load_data();
+    load_data();
 
- function load_data(query)
- {
-  $.ajax({
-   url:"searchBar.php",
-   method:"POST",
-   data:{query:query},
-   success:function(data)
-   {
-    $('#result').html(data);
-   }
-  });
- }
- $('#search_text').keyup(function(){
-  var search = $(this).val();
-  if(search != '')
-  {
-   load_data(search);
-  }
-  else
-  {
-   load_data();
-  }
- });
-});
-</script>
+    function load_data(query){
+        $.ajax({
+        url:"searchBar.php",
+        method:"POST",
+        data:{query:query},
+        success:function(data){
+            $('#result').html(data);
+        }
+        });
+    }
+    $('#search_text').keyup(function(){
+        var search = $(this).val();
+        if(search != ''){
+            load_data(search);
+        }
+        else{
+            load_data();
+        }
+    });
+    });
+    </script>
 
 
 
