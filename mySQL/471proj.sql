@@ -131,7 +131,7 @@ CREATE TABLE `workout` (
   `wMonth` int(2) NOT NULL,
   `wDay` int(2) NOT NULL,
   `wYear` int(4) NOT NULL,
-  `wTime` time(6) NOT NULL,
+  `wTime` time(0) NOT NULL,
   `privacy` varchar(7) NOT NULL,
   `workoutListID_fk` int(11) NOT NULL,
   `wDesc` text

@@ -14,9 +14,9 @@ while ($workoutInfo = mysqli_fetch_assoc($result)){
 		echo '<a class="list-group-item flex-column align-items-start list-group-item-primary ">';
 	    	echo '<div class="d-flex justify-content-between" id="workout">';
 	        	echo '<h5 class="mb-1">Workout #' . $num_workouts . '</h5>';
-	        	echo '<small>' . $workoutInfo['wMonth'] . '/' .$workoutInfo['wDay'] . '/' . $workoutInfo['wYear'] . '</small>';
+	        	echo '<small>' . $workoutInfo['wMonth'] . '/' .$workoutInfo['wDay'] . '/' . $workoutInfo['wYear'] . ' - ' . $workoutInfo['wTime'] . '</small> ';
 	    	echo '</div>';
-	    	echo '<p class="mb-1">Workout Description</p>';
+	    	echo '<p class="mb-1">'. $workoutInfo['wDesc'] . '</p>';
 	    	echo '<small>Public - Shared on your personal wall and the community wall</small>';
             echo '<hr>';
             echo '<button type="button" class="btn primary">View Workout #' . $num_workouts . '</button>';
@@ -25,9 +25,9 @@ while ($workoutInfo = mysqli_fetch_assoc($result)){
 		echo '<a class="list-group-item flex-column align-items-start">';
 	    	echo '<div class="d-flex justify-content-between" id="workout">';
 	        	echo '<h5 class="mb-1">Workout #' . $num_workouts . '</h5>';
-	        	echo '<small>' . $workoutInfo['wMonth'] . '/' .$workoutInfo['wDay'] . '/' . $workoutInfo['wYear'] . '</small>';
+	        	echo '<small>' . $workoutInfo['wMonth'] . '/' .$workoutInfo['wDay'] . '/' . $workoutInfo['wYear'] . ' - ' . $workoutInfo['wTime'] . '</small> ';
 	    	echo '</div>';
-	    	echo '<p class="mb-1">Workout Description</p>';
+	    	echo '<p class="mb-1">'. $workoutInfo['wDesc'] . '</p>';
 	    	echo '<small> Private - Stored only in your workout list</small>';
 	    	echo '<hr>';
             echo '<button type="button" class="btn primary">View Workout #' . $num_workouts . '</button>';
