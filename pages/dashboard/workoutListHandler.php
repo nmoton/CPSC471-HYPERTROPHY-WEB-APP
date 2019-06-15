@@ -9,12 +9,12 @@ $result = mysqli_query($db, $searchQuery);
 $num_workouts = mysqli_num_rows($result);
 
 //Time cannot be displayed as the wTime variable in the database was not configured properly
-while ($row = mysqli_fetch_assoc($result)){
-	if ($row['privacy'] == 'public'){
+while ($workoutInfo = mysqli_fetch_assoc($result)){
+	if ($workoutInfo['privacy'] == 'public'){
 		echo '<a class="list-group-item flex-column align-items-start list-group-item-primary ">';
 	    	echo '<div class="d-flex justify-content-between" id="workout">';
 	        	echo '<h5 class="mb-1">Workout #' . $num_workouts . '</h5>';
-	        	echo '<small>' . $row['wMonth'] . '/' .$row['wDay'] . '/' . $row['wYear'] . '</small>';
+	        	echo '<small>' . $workoutInfo['wMonth'] . '/' .$workoutInfo['wDay'] . '/' . $workoutInfo['wYear'] . '</small>';
 	    	echo '</div>';
 	    	echo '<p class="mb-1">Workout Description</p>';
 	    	echo '<small>Public - Shared on your personal wall and the community wall</small>';
@@ -25,7 +25,7 @@ while ($row = mysqli_fetch_assoc($result)){
 		echo '<a class="list-group-item flex-column align-items-start">';
 	    	echo '<div class="d-flex justify-content-between" id="workout">';
 	        	echo '<h5 class="mb-1">Workout #' . $num_workouts . '</h5>';
-	        	echo '<small>' . $row['wMonth'] . '/' .$row['wDay'] . '/' . $row['wYear'] . '</small>';
+	        	echo '<small>' . $workoutInfo['wMonth'] . '/' .$workoutInfo['wDay'] . '/' . $workoutInfo['wYear'] . '</small>';
 	    	echo '</div>';
 	    	echo '<p class="mb-1">Workout Description</p>';
 	    	echo '<small> Private - Stored only in your workout list</small>';
