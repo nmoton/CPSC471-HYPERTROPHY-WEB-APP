@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2019 at 10:58 PM
+-- Generation Time: Jun 15, 2019 at 01:44 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -56,7 +56,6 @@ CREATE TABLE `exercise` (
   `sets` int(11) NOT NULL,
   `reps` int(11) NOT NULL,
   `weight` int(11) NOT NULL,
-  `RPE` int(11) NOT NULL,
   `workoutID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -108,15 +107,23 @@ CREATE TABLE `standard_user` (
 
 CREATE TABLE `user` (
   `userID` int(11) NOT NULL,
-  `email` int(11) NOT NULL,
+  `email` text NOT NULL,
   `password` int(11) NOT NULL,
-  `fname` int(11) NOT NULL,
-  `lname` int(11) NOT NULL,
-  `bMonth` int(11) NOT NULL,
-  `bDay` int(11) NOT NULL,
-  `bYear` int(11) NOT NULL,
+  `fname` text NOT NULL,
+  `lname` text NOT NULL,
+  `bMonth` varchar(11) NOT NULL,
+  `bDay` varchar(11) NOT NULL,
+  `bYear` varchar(11) NOT NULL,
   `bAge` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`userID`, `email`, `password`, `fname`, `lname`, `bMonth`, `bDay`, `bYear`, `bAge`) VALUES
+(1, 'marela.carlos@ucalgary.ca', 1234, 'Marela', 'Carlos', '4', '17', '1998', 21),
+(2, 'nathan.moton@ucalgary.ca', 1234, 'Nathan', 'Moton', '5', '15', '1998', 21);
 
 -- --------------------------------------------------------
 
@@ -129,9 +136,10 @@ CREATE TABLE `workout` (
   `wMonth` int(11) NOT NULL,
   `wDay` int(11) NOT NULL,
   `wYear` int(11) NOT NULL,
-  `wTime` int(11) NOT NULL,
+  `wTime` time(6) NOT NULL,
   `privacy` text NOT NULL,
-  `workoutListID_fk` int(11) NOT NULL
+  `workoutListID_fk` int(11) NOT NULL,
+  `wDesc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -225,7 +233,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `workout`
