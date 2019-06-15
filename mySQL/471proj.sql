@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2019 at 09:05 PM
+-- Generation Time: Jun 15, 2019 at 09:10 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -52,7 +52,7 @@ CREATE TABLE `community` (
 
 CREATE TABLE `exercise` (
   `exerciseID` int(11) NOT NULL,
-  `name` text NOT NULL,
+  `name` varchar(255) NOT NULL,
   `sets` int(4) NOT NULL,
   `reps` int(11) NOT NULL,
   `weight` int(11) NOT NULL,
@@ -109,8 +109,8 @@ CREATE TABLE `user` (
   `userID` int(11) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(50) NOT NULL,
-  `fname` text NOT NULL,
-  `lname` text NOT NULL,
+  `fname` varchar(255) NOT NULL,
+  `lname` varchar(255) NOT NULL,
   `bMonth` int(2) NOT NULL,
   `bDay` int(2) NOT NULL,
   `bYear` int(4) NOT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE `workout` (
   `wDay` int(2) NOT NULL,
   `wYear` int(4) NOT NULL,
   `wTime` time(6) NOT NULL,
-  `privacy` text NOT NULL,
+  `privacy` varchar(7) NOT NULL,
   `workoutListID_fk` int(11) NOT NULL,
   `wDesc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
