@@ -12,7 +12,7 @@
     <link href="../../css/global.css" rel="stylesheet" media="screen">
     <link href="../../css/dashboard/dashboardNavbarBackGlobal.css" rel="stylesheet" media="screen" />
     <link href="../../css/dashboard/dashboardGlobal.css" rel="stylesheet" media="screen" />
-    <link href="../../css/dashboard/workoutList.css" rel="stylesheet" media="screen" />
+    <link href="../../css/dashboard/workout.css" rel="stylesheet" media="screen" />
 </head>
 <body>
     <nav class="navbar fixed-top navbar-dark fixed-top-2">
@@ -24,7 +24,7 @@
         </ul>
         <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">My Workout List</a>
+                <a class="nav-link" href="#">User Workout</a>
             </li>
         </ul>
     </div>
@@ -35,7 +35,7 @@
             <div class="input-group md-form form-sm form-2 pl-0" id="search">
                 <input class="form-control my-0 py-1" type="text" placeholder="Search Users" aria-label="Search">
                 <div class="input-group-append">
-                    <span class="input-group-text lighten-2" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+                    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
                 </div>
             </div>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,33 +60,60 @@
         </div>
     </nav>
 
-    <div class="container" id="workoutList">
-        <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex justify-content-between" id="workout">
-                    <h5 class="mb-1">Workout #3</h5>
-                    <small>06/13/2019 - 14:30</small>
+    <div class="container" id="user-banner">
+        <div class="card">
+            <h5 class="card-header">Workout Information</h5>
+            <div class="card-body">
+                <div class="user-name" id="user-name">
+                    <h5>Nathan Moton</h5>
                 </div>
-                <p class="mb-1">Workout Description</p>
-                <small>Private - Stored only in your workout list</small>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list-group-item-primary">
-                <div class="d-flex justify-content-between" id="workout">
-                    <h5 class="mb-1">Workout #2</h5>
-                    <small>06/11/2019 - 14:24</small>
+                <div class="user-about" id="user-about">
+                    <p><strong>User ID: </strong> #0001</p>
+                    <p><strong>Gender:</strong> Male</p>
+                    <p><strong>Age:</strong> 21 Years Old</p>
                 </div>
-                <p class="mb-1">New Personal Record!</p>
-                <small>Public - Shared on your personal wall and the community wall</small>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex justify-content-between" id="workout">
-                    <h5 class="mb-1">Workout #1</h5>
-                    <small>06/09/2019 - 14:45</small>
+                <hr>
+                <div class="workout-name" id="workout-name">
+                    <h5>Workout #1</h5>
                 </div>
-                <p class="mb-1">Workout Description</p>
-                <small>Private - Stored only in your workout list</small>
-            </a>
+                <div class="workout-about" id="workout-about">
+                    <p><strong>Workout ID: </strong> #0001</p>
+                    <p><strong>Completed: </strong> 06/09/19 - 14:45</p>
+                    <p><strong>Privacy: </strong> Private</p>
+                    <p><strong>Description: </strong> Workout Description</p>
+                </div>
+            </div>
         </div>
+    </div>
+
+
+    <div class="container" id="exerciseList">
+        <ul class="list-group">
+            <li class="list-group-item flex-column align-items-start">
+                <div class="d-flex justify-content-between" id="exercise">
+                    <h5 class="mb-1">Barbell Deadlift</h5>
+                </div>
+                <p><strong>Weight: </strong> 405 lbs</p>
+                <p><strong>Set(s): </strong> 1</p>
+                <p><strong>Rep(s): </strong> 5</p>
+            </li>
+            <li class="list-group-item flex-column align-items-start">
+                <div class="d-flex justify-content-between" id="exercise">
+                    <h5 class="mb-1">Barbell Flat Bench Press</h5>
+                </div>
+                <p><strong>Weight: </strong> 225 lbs</p>
+                <p><strong>Set(s): </strong> 5</p>
+                <p><strong>Rep(s): </strong> 5</p>
+            </li>
+            <li class="list-group-item flex-column align-items-start">
+                <div class="d-flex justify-content-between" id="exercise">
+                    <h5 class="mb-1">Barbell High Bar Squat</h5>
+                </div>
+                <p><strong>Weight: </strong> 325 lbs</p>
+                <p><strong>Set(s): </strong> 5</p>
+                <p><strong>Rep(s): </strong> 5</p>
+            </li>
+        </ul>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

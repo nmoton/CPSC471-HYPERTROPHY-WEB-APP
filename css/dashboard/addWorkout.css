@@ -1,0 +1,20 @@
+#addExerciseCard {
+	margin-top: 125px;
+}
+
+#workoutTableCard {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+#workoutTable {
+	margin: 0 auto;
+}
+
+#form-exercise.form-exercise input {
+	margin-bottom: 15px;
+}
+
+#workoutTableCard button {
+	margin-top: 15px;
+}
