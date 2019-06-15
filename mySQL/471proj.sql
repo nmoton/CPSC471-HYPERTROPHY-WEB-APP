@@ -115,18 +115,10 @@ CREATE TABLE `user` (
   `bDay` int(2) NOT NULL,
   `bYear` int(4) NOT NULL,
   `bAge` int(3) NOT NULL,
-  `instagram` varchar(50) NOT NULL,
-  `twitter` varchar(50) NOT NULL,
-  `facebook` varchar(50) NOT NULL
+  `instagram` varchar(50),
+  `twitter` varchar(50),
+  `facebook` varchar(50)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`userID`, `email`, `password`, `fname`, `lname`, `bMonth`, `bDay`, `bYear`, `bAge`, `instagram`, `twitter`, `facebook`) VALUES
-(1, 'marela.carlos@ucalgary.ca', '1234', 'Marela', 'Carlos', 4, 17, 1998, 21, '', '', ''),
-(2, 'nathan.moton@ucalgary.ca', '1234', 'Nathan', 'Moton', 5, 15, 1998, 21, '', '', '');
 
 -- --------------------------------------------------------
 
@@ -142,7 +134,7 @@ CREATE TABLE `workout` (
   `wTime` time(6) NOT NULL,
   `privacy` varchar(7) NOT NULL,
   `workoutListID_fk` int(11) NOT NULL,
-  `wDesc` text NOT NULL
+  `wDesc` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
