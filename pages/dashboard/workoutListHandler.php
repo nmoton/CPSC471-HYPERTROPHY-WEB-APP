@@ -1,11 +1,14 @@
 <?php
+//(1) Specific user based workout lists cannot be retrieved as the user table has not been configured properly
 $db = mysqli_connect('localhost', 'root', '', '471proj');
 
+//As stated in (1), the table has not been configured correctly, so we are only using values based on workoutListID = 1
 $searchQuery = "SELECT * FROM workout WHERE workoutListID_fk = '1' ORDER BY workoutID DESC";
 $result = mysqli_query($db, $searchQuery);
 
 $num_workouts = mysqli_num_rows($result);
 
+//Time cannot be displayed as the wTime variable in the database was not configured properly
 while ($row = mysqli_fetch_assoc($result)){
 	if ($row['privacy'] == 'public'){
 		echo '<a href="#" class="list-group-item list-group-item-action flex-column align-items-start list-group-item-primary">';
