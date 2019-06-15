@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2019 at 09:10 PM
+-- Generation Time: Jun 15, 2019 at 09:24 PM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -114,16 +114,19 @@ CREATE TABLE `user` (
   `bMonth` int(2) NOT NULL,
   `bDay` int(2) NOT NULL,
   `bYear` int(4) NOT NULL,
-  `bAge` int(3) NOT NULL
+  `bAge` int(3) NOT NULL,
+  `instagram` varchar(50) NOT NULL,
+  `twitter` varchar(50) NOT NULL,
+  `facebook` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`userID`, `email`, `password`, `fname`, `lname`, `bMonth`, `bDay`, `bYear`, `bAge`) VALUES
-(1, 'marela.carlos@ucalgary.ca', '1234', 'Marela', 'Carlos', 4, 17, 1998, 21),
-(2, 'nathan.moton@ucalgary.ca', '1234', 'Nathan', 'Moton', 5, 15, 1998, 21);
+INSERT INTO `user` (`userID`, `email`, `password`, `fname`, `lname`, `bMonth`, `bDay`, `bYear`, `bAge`, `instagram`, `twitter`, `facebook`) VALUES
+(1, 'marela.carlos@ucalgary.ca', '1234', 'Marela', 'Carlos', 4, 17, 1998, 21, '', '', ''),
+(2, 'nathan.moton@ucalgary.ca', '1234', 'Nathan', 'Moton', 5, 15, 1998, 21, '', '', '');
 
 -- --------------------------------------------------------
 
