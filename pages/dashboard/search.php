@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<!--https://www.webslesson.info/2016/03/ajax-live-data-search-using-jquery-php-mysql.html-->
+
+=======
+>>>>>>> origin
 <!DOCTYPE html>
 
 <html lang="en">
@@ -24,7 +29,11 @@
         </ul>
         <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
+<<<<<<< HEAD
+                <!--<a class="nav-link" href="#">'000'</a>-->
+=======
                 <a class="nav-link" href="#">'000'</a>
+>>>>>>> origin
             </li>
         </ul>
     </div>
@@ -33,10 +42,17 @@
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container" id="home">
             <div class="input-group md-form form-sm form-2 pl-0" id="search">
+<<<<<<< HEAD
+                <input type="text" name = "search_text" id = "search_text" placeholder="Search Users" aria-label="Search" class="form-control my-0 py-1">
+                <div class="input-group-append">
+                </div>
+                
+=======
                 <input class="form-control my-0 py-1" type="text" placeholder="Search Users" aria-label="Search">
                 <div class="input-group-append">
                     <span class="input-group-text lighten-2" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
                 </div>
+>>>>>>> origin
             </div>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -59,6 +75,18 @@
             </div>
         </div>
     </nav>
+<<<<<<< HEAD
+       
+        
+
+        <div class="container" id="dashboard-post">
+            <div class="card">
+                <div class="card-header">
+                    <div class="align-items-center">                
+                    </div>
+                </div>
+                <div class="card-body">
+=======
 
     <div class="container" id="search-result-area">
         <div class="container" id="dashboard-post">
@@ -85,10 +113,61 @@
                 </div>
                 <div class="card-body">
                     <p>21 Year(s) Old, Female</p>
+>>>>>>> origin
                     <button type="button" class="btn primary">View User's Wall</button>
                 </div>
             </div>
         </div>
+<<<<<<< HEAD
+        <!--This is where the result from the Ajax script appears, need to change the location of this
+            later but for sake of demonstrating functionality, this is fine-->
+        <div id = "result"></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!--Ajax script for accessing the users that have been searched, don't change this.-->
+   <script>
+    $(document).ready(function(){
+
+    load_data();
+
+    function load_data(query){
+        $.ajax({
+        url:"searchBar.php",
+        method:"POST",
+        data:{query:query},
+        success:function(data){
+            $('#result').html(data);
+        }
+        });
+    }
+    $('#search_text').keyup(function(){
+        var search = $(this).val();
+        if(search != ''){
+            load_data(search);
+        }
+        else{
+            load_data();
+        }
+    });
+    });
+    </script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+=======
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -97,3 +176,4 @@
 </body>
 
 </html>
+>>>>>>> origin
