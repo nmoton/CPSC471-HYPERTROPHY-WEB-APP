@@ -4,12 +4,6 @@ session_start();
 
 $email = "";
 
-//prints the last sql query error to phpError.log
-ini_set("log_errors", 1);
-ini_set("error_log", "phpError.log");
-
-$errors = array();
-
 //create db link
 $db = mysqli_connect('localhost', 'root', '', '471proj');
 
@@ -61,10 +55,7 @@ if (isset($_POST['login'])) {
   	   //Redirect to dashboard/workoutList.php - TEMPORARY
   	   header('location: dashboard/workoutList.php');
   	}
-     
-   else {
-  		array_push($errors, "Wrong email/password combination");
-  	}
+    
   }
 
 }
