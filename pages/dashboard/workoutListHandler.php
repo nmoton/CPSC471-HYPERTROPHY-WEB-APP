@@ -25,7 +25,9 @@ while ($workoutInfo = mysqli_fetch_assoc($result)){
 	    	echo '<p class="mb-1">'. $workoutInfo['wDesc'] . '</p>';
 	    	echo '<small>Public - Shared on your personal wall and the community wall</small>';
             echo '<hr>';
-            echo '<button type="button" class="btn primary">View Workout #' . $num_workouts . '</button>';
+            echo '<form action="workout.php" method="post">';
+            	echo '<button type="submit" class="btn primary" name="workout" value="'. $workoutInfo['workoutID'] .'"">View Workout #' . $num_workouts . '</button>';
+            echo '</form>';
 		echo' </a>';
 	} else {
 		echo '<a class="list-group-item flex-column align-items-start">';
@@ -36,7 +38,9 @@ while ($workoutInfo = mysqli_fetch_assoc($result)){
 	    	echo '<p class="mb-1">'. $workoutInfo['wDesc'] . '</p>';
 	    	echo '<small> Private - Stored only in your workout list</small>';
 	    	echo '<hr>';
-            echo '<button type="button" class="btn primary">View Workout #' . $num_workouts . '</button>';
+	    	echo '<form action="workout.php" method="post">';
+            	echo '<button type="submit" class="btn primary" name="workout" value="'. $workoutInfo['workoutID'] .'"">View Workout #' . $num_workouts . '</button>';
+            echo '</form>';
 		echo' </a>';
 	}
 	$num_workouts--;
