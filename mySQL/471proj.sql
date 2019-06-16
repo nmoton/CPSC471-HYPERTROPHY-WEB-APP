@@ -115,9 +115,9 @@ CREATE TABLE `user` (
   `bDay` int(2) NOT NULL,
   `bYear` int(4) NOT NULL,
   `bAge` int(3) NOT NULL,
-  `instagram` varchar(50) NOT NULL,
-  `twitter` varchar(50) NOT NULL,
-  `facebook` varchar(50) NOT NULL
+  `instagram` varchar(50),
+  `twitter` varchar(50),
+  `facebook` varchar(50)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -134,7 +134,7 @@ CREATE TABLE `workout` (
   `wTime` time(6) NOT NULL,
   `privacy` varchar(7) NOT NULL,
   `workoutListID_fk` int(11) NOT NULL,
-  `wDesc` text NOT NULL
+  `wDesc` text
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
