@@ -20,7 +20,9 @@ while ($workoutInfo = mysqli_fetch_assoc($result)){
                 		echo '<small>' . $workoutInfo['wMonth'] . '/' .$workoutInfo['wDay'] . '/' . $workoutInfo['wYear'] . ' - ' . $workoutInfo['wTime'] . '</small> ';
                 	echo '</div>';
                 	echo '<p class="card-text">' .$workoutInfo['fname'] . ' has completed a workout.</p>';
-                	echo '<button type="button" class="btn primary">View Workout</button>';
+                    echo '<form action="workout.php" method="post">';
+                	   echo '<button type="submit" class="btn primary" name="workout" value="'. $workoutInfo['workoutID'] .'">View Workout</button>';
+                    echo '</form>';
             	echo '</div>';
     		echo '</div>';
 		echo '</div>';
