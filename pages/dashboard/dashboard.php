@@ -45,57 +45,9 @@
 	</nav>
 
 	<div class="container" id="dashboard-post-area">
-		<div class="container" id="dashboard-post">
-        	<div class="card">
-            	<div class="card-header">
-                    <h5>Nathan Moton</h5>
-                    <h6>UID: #0001</h6>
-            	</div>
-            	<div class="card-body">
-                	<div class="text-muted h7 mb-2"> 
-                		<i class="fa fa-clock-o"></i>2 hours ago
-                	</div>
-                	<p class="card-text">Nathan has just completed a workout.</p>
-                	<button type="button" class="btn primary">View Workout</button>
-            	</div>
-    		</div>
-		</div>
-
-		<div class="container" id="dashboard-post">
-        	<div class="card">
-            	<div class="card-header">
-                	<div class="align-items-center">
-                    	<h5>Marela Carlos</h5>
-                    	<h6>UID: #0002</h6>
-                	</div>
-            	</div>
-            	<div class="card-body">
-                	<div class="text-muted h7 mb-2"> 
-                		<i class="fa fa-clock-o"></i>3 hours ago
-                	</div>
-                	<p class="card-text">Marela has just completed a workout.</p>
-                	<button type="button" class="btn primary">View Workout</button>
-            	</div>
-    		</div>
-		</div>
-
-		<div class="container" id="dashboard-post">
-        	<div class="card">
-            	<div class="card-header">
-                	<div class="align-items-center">
-                    	<h5>Marela Carlos</h5>
-                    	<h6>UID: #0002</h6>
-                	</div>
-            	</div>
-            	<div class="card-body">
-                	<div class="text-muted h7 mb-2"> 
-                		<i class="fa fa-clock-o"></i>3 hours ago
-                	</div>
-                	<p class="card-text">Marela has just set a personal record!</p>
-                	<button type="button" class="btn primary">View Workout</button>
-            	</div>
-    		</div>
-		</div>
+        <?php 
+        include 'dashboardHandler.php';
+        ?>
 	</div>
 
 
