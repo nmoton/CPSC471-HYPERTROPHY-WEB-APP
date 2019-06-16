@@ -35,7 +35,7 @@
 						<input type="text" class="form-control" name="gender" placeholder="Gender" required="" />
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-						<input type="text" class="form-control" name="age" placeholder="Age" required="" />
+						<input type="number" class="form-control" name="age" placeholder="Age" required="" />
 					</div>
 					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 						<input type="number" class="form-control" name="bmonth" placeholder="Birth Month" required="" />
