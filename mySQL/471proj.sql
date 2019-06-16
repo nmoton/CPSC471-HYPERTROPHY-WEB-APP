@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 15, 2019 at 09:54 PM
+-- Generation Time: Jun 16, 2019 at 09:34 AM
 -- Server version: 10.1.40-MariaDB
 -- PHP Version: 7.3.5
 
@@ -115,9 +115,10 @@ CREATE TABLE `user` (
   `bDay` int(2) NOT NULL,
   `bYear` int(4) NOT NULL,
   `bAge` int(3) NOT NULL,
-  `instagram` varchar(50),
-  `twitter` varchar(50),
-  `facebook` varchar(50)
+  `instagram` varchar(50) NOT NULL,
+  `twitter` varchar(50) NOT NULL,
+  `facebook` varchar(50) NOT NULL,
+  `gender` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -134,7 +135,7 @@ CREATE TABLE `workout` (
   `wTime` time(6) NOT NULL,
   `privacy` varchar(7) NOT NULL,
   `workoutListID_fk` int(11) NOT NULL,
-  `wDesc` text
+  `wDesc` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
