@@ -62,30 +62,9 @@
 
     <div class="container" id="workoutList">
         <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex justify-content-between" id="workout">
-                    <h5 class="mb-1">Workout #3</h5>
-                    <small>06/13/2019 - 14:30</small>
-                </div>
-                <p class="mb-1">Workout Description</p>
-                <small>Private - Stored only in your workout list</small>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list-group-item-primary">
-                <div class="d-flex justify-content-between" id="workout">
-                    <h5 class="mb-1">Workout #2</h5>
-                    <small>06/11/2019 - 14:24</small>
-                </div>
-                <p class="mb-1">New Personal Record!</p>
-                <small>Public - Shared on your personal wall and the community wall</small>
-            </a>
-            <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
-                <div class="d-flex justify-content-between" id="workout">
-                    <h5 class="mb-1">Workout #1</h5>
-                    <small>06/09/2019 - 14:45</small>
-                </div>
-                <p class="mb-1">Workout Description</p>
-                <small>Private - Stored only in your workout list</small>
-            </a>
+                <?php 
+                    include 'workoutListHandler.php';
+                ?>
         </div>
     </div>
 
