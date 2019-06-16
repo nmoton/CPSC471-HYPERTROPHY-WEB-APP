@@ -4,7 +4,7 @@
 
 <html lang="en">
 	<head>
-		<title>Hive Mind - Join For Free</title>
+		<title>Hypertrophy - Join For Free</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="description" content="Registration Page for Hive Mind">
 		<meta name="author" content="Nathan Moton">
@@ -19,11 +19,10 @@
 	<body>
 		<div class="wrapper">
 			<form class="form-signin" method="post">
-				<h2 class="temp-logo-holder text-center">Hive Mind Logo</h2>
-				<h2 class="form-signin-heading text-center">Create your Hive Mind Account</h2>
+				<h2 class="temp-logo-holder text-center">Hypertrophy Logo</h2>
+				<h2 class="form-signin-heading text-center">Create your Hypertrophy Account</h2>
 				<?php 
 					include '../pages/userHandler.php';
-					include '../errors/errors.php'; 
 				?>
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -32,10 +31,22 @@
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 						<input type="text" class="form-control" name="lastName" placeholder="Last Name" required="" autofocus=""/>
 					</div>
-					<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
-						<input type="text" class="form-control" name="institution" placeholder="Institution" required="" />
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<input type="text" class="form-control" name="gender" placeholder="Gender" required="" />
 					</div>
-					<div class="col-lg-12 col-md-12 col-sm-6 col-xs-12">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<input type="number" class="form-control" name="age" placeholder="Age" required="" />
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<input type="number" class="form-control" name="bmonth" placeholder="Birth Month" required="" />
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						<input type="number" class="form-control" name="bday" placeholder="Birth Day" required="" />
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+						<input type="number" class="form-control" name="byear" placeholder="Birth Year" required="" />
+					</div>
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 						<input type="text" class="form-control" name="email" placeholder="Email Address" required="" autofocus=""/>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -45,10 +56,6 @@
 						<input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" required="" />
 					</div>
 				</div>
-				<label class="checkbox">
-					<input type="checkbox" value="notARobot" id="notARobot" name="notARobot">
-					I agree to all Terms & Conditions
-				</label>
 				<button class="btn btn-lg btn-primary btn-block" name = "register">Complete Registration</button>
 			</form>
 		</div>
@@ -63,7 +70,7 @@
 			</small>
 			<small>
 				Already have an account?
-				<a href="login.php">Login Here</a>
+				<a href="login.php">Login</a>
 			</small>
 		</div>
 

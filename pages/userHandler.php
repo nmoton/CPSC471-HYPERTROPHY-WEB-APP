@@ -4,14 +4,80 @@ session_start();
 
 $email = "";
 
-//prints the last sql query error to phpError.log
-ini_set("log_errors", 1);
-ini_set("error_log", "phpError.log");
-
-$errors = array();
-
 //create db link
-$db = mysqli_connect('localhost', 'root', '', '471proj');
+$db = mysqli_connect("localhost", "root", "", "471proj");
+echo "connection successful";
+
+if (isset($_POST['register']))
+{
+  $fname = $_POST['firstName'];
+  $lname = $_POST['lastName'];
+  $gender = $_POST['gender'];
+  $age = $_POST['age'];
+  $bMonth = $_POST['bmonth'];
+  $bDay = $_POST['bday'];
+  $bYear = $_POST['byear'];
+  $email = $_POST['email'];
+  $password = $_POST['password'];
+  $confirmPassword = $_POST['confirmPassword'];
+
+  
+  $user_check_query = "SELECT * FROM user WHERE email='$email' LIMIT 1";
+  $result = mysqli_query($db, $user_check_query);
+  $user = mysqli_fetch_assoc($result);
+  
+  //doing error checks 
+  if ($password != $confirmPassword)
+  {
+    echo"passwords do not match";
+  }
+  
+  if ($user) 
+  {
+    if ($user['email'] == $email) 
+    {
+      echo "email already exists";
+    }
+  }
+  
+  //Register the user if there are no errors
+  else
+  {
+    //$password = md5($password);//encrypt the password
+
+    $query = "INSERT INTO USER (fname, lname, bMonth, bDay, bYear, email, password, gender, bAge) VALUES ('$fname', '$lname', '$bMonth', '$bDay', '$bYear', '$email', '$password', '$gender', 'age')";
+    if(!mysqli_query($db, $query)){
+      die('error: cannot insert new record');
+    }
+    $newrecord = 'new record added to db';
+    
+    $_SESSION['email'] = $email;
+        $_SESSION['success'] = "You are now registered and logged-in. Welcome!";
+    
+    //header('location: dashboard.php');
+
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //for logging in users 
 if (isset($_POST['login'])) {
@@ -61,10 +127,7 @@ if (isset($_POST['login'])) {
   	   //Redirect to dashboard/workoutList.php - TEMPORARY
   	   header('location: dashboard/workoutList.php');
   	}
-     
-   else {
-  		array_push($errors, "Wrong email/password combination");
-  	}
+    
   }
 
 }
