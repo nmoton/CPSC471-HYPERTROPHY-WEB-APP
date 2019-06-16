@@ -60,61 +60,9 @@
         </div>
     </nav>
 
-    <div class="container" id="user-banner">
-        <div class="card">
-            <h5 class="card-header">Workout Information</h5>
-            <div class="card-body">
-                <div class="user-name" id="user-name">
-                    <h5>Nathan Moton</h5>
-                </div>
-                <div class="user-about" id="user-about">
-                    <p><strong>User ID: </strong> #0001</p>
-                    <p><strong>Gender:</strong> Male</p>
-                    <p><strong>Age:</strong> 21 Years Old</p>
-                </div>
-                <hr>
-                <div class="workout-name" id="workout-name">
-                    <h5>Workout #1</h5>
-                </div>
-                <div class="workout-about" id="workout-about">
-                    <p><strong>Workout ID: </strong> #0001</p>
-                    <p><strong>Completed: </strong> 06/09/19 - 14:45</p>
-                    <p><strong>Privacy: </strong> Private</p>
-                    <p><strong>Description: </strong> Workout Description</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container" id="exerciseList">
-        <ul class="list-group">
-            <li class="list-group-item flex-column align-items-start">
-                <div class="d-flex justify-content-between" id="exercise">
-                    <h5 class="mb-1">Barbell Deadlift</h5>
-                </div>
-                <p><strong>Weight: </strong> 405 lbs</p>
-                <p><strong>Set(s): </strong> 1</p>
-                <p><strong>Rep(s): </strong> 5</p>
-            </li>
-            <li class="list-group-item flex-column align-items-start">
-                <div class="d-flex justify-content-between" id="exercise">
-                    <h5 class="mb-1">Barbell Flat Bench Press</h5>
-                </div>
-                <p><strong>Weight: </strong> 225 lbs</p>
-                <p><strong>Set(s): </strong> 5</p>
-                <p><strong>Rep(s): </strong> 5</p>
-            </li>
-            <li class="list-group-item flex-column align-items-start">
-                <div class="d-flex justify-content-between" id="exercise">
-                    <h5 class="mb-1">Barbell High Bar Squat</h5>
-                </div>
-                <p><strong>Weight: </strong> 325 lbs</p>
-                <p><strong>Set(s): </strong> 5</p>
-                <p><strong>Rep(s): </strong> 5</p>
-            </li>
-        </ul>
-    </div>
+    <?php 
+        include 'workoutHandler.php';
+    ?>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
