@@ -136,12 +136,30 @@ CREATE TABLE `user` (
   `bMonth` int(2) NOT NULL,
   `bDay` int(2) NOT NULL,
   `bYear` int(4) NOT NULL,
-  `bAge` int(3) NOT NULL,
+  `bAge` int(2) NOT NULL,
   `instagram` varchar(50) DEFAULT NULL,
   `twitter` varchar(50) DEFAULT NULL,
   `facebook` varchar(50) DEFAULT NULL,
   `gender` varchar(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Data dump for table `user`
+--
+
+INSERT INTO `user` (`userID`, `email`, `password`, `fname`, `lname`, `bMonth`, `bDay`, `bYear`, `bAge`, `instagram`, `twitter`, `facebook`,`gender`) VALUES 
+(81902840751, ’nathan@email.com’, 'password', ‘Nathan’, ‘Moton’, 05, 15, 1998, 21, ‘’, ‘’, ‘’, ‘Male’),
+(46168090512, ’marela@email.com’, 'password', ‘Marela’, ‘Carlos’, 04, 17, 1998, 21, ‘’, ‘’, ‘’, ‘Female’),
+(81902840751, ’melissa@email.com’, 'password', ‘Melissa’, ‘Picazo’, 04, 11, 1998, 21, ‘’, ‘’, ‘’, ‘Female’),
+(46545163326, ’izaan@email.com’, 'password', Izaan ‘Enriquez’, 02, 28, 1997, 22, ‘’, ‘’, ‘’, ‘Male’),
+(23642277764, ’calum@email.com’, 'password', ‘Calum’, ‘Whelan’, 09, 30, 1995, ’23, ‘’, ‘’, ‘’, ‘Male’),
+(93311952230, ‘mallory@email.com’, 'password', ‘Mallory’, ‘Vega’, 12, 31, 1993, 25, ‘’, ‘’, ‘’, ‘Female’),
+(69522562614, ‘jiya@email.com’, 'password', ‘Jiya’, ‘Li’, 01, 01, 1989, 30, ‘’, ‘’, ‘’, ‘Female’),
+(96795756443, ‘alice@email.com’, 'password', ‘Alice’, ‘Fountain’, 07, 05, 2000, 18, ‘’, ‘’, ‘’, ‘Female’),
+(40953100511, ’gurpreet@email.com’, 'password', ‘Gurpreet’, ‘Patel, 11, 23, 1991, 27, ‘’, ‘’, ‘’, ‘Male’),
+(27199249161, ’fern@email.com’, 'password', ‘Fern’, ‘Collins’, 03, 13, 1994, 25, ‘’, ‘’, ‘’, ‘Female’);
 
 -- --------------------------------------------------------
 
