@@ -13,30 +13,22 @@
     <link href="../../css/dashboard/dashboardNavbarBackGlobal.css" rel="stylesheet" media="screen"/>
     <link href="../../css/dashboard/dashboardGlobal.css" rel="stylesheet" media="screen"/>
     <link href="../../css/dashboard/dashboardSearch.css" rel="stylesheet" media="screen" />
+    <link href="../../css/dashboard/dashboard.css" rel="stylesheet" media="screen" />
 </head>
 <body>
-    <nav class="navbar fixed-top navbar-dark fixed-top-2">
-        <div class="container">
-        <ul class="navbar-nav" id="back">
-            <li class="nav-item active">
-                <i class="fas fa-arrow-circle-left fa-2x"></i>
-            </li>
-        </ul>
-        <ul class="navbar-nav mx-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">'000'</a>
-            </li>
-        </ul>
-    </div>
-    </nav>
+
+    <?php 
+        include 'dashboardSearchHandler.php';
+    ?>
+    
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container" id="home">
             <form method="post">
                 <div class="input-group">
-                    <input type="text" class="form-control my-0 py-1" placeholder="Search User" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <input type="text" class="form-control my-0 py-1" placeholder="Search User" aria-label="Recipient's username" aria-describedby="basic-addon2" id="seach" name="search">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="navbarButton"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
+                        <button class="btn btn-outline-secondary" type="submit" id="navbarButton"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
                     </div>
                 </div>
             </form>
@@ -61,37 +53,6 @@
             </div>
         </div>
     </nav>
-
-    <div class="container" id="search-result-area">
-        <div class="container" id="dashboard-post">
-            <div class="card">
-                <div class="card-header">
-                    <div class="align-items-center">
-                        <h5>Nathan Moton</h5>
-                        <h6>UID: #0001</h6>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>21 Year(s) Old, Male</p>
-                    <button type="button" class="btn primary">View User's Wall</button>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="dashboard-post">
-            <div class="card">
-                <div class="card-header">
-                    <div class="align-items-center">
-                        <h5>Marela Carlos</h5>
-                        <h6>UID: #0002</h6>
-                    </div>
-                </div>
-                <div class="card-body">
-                    <p>21 Year(s) Old, Female</p>
-                    <button type="button" class="btn primary">View User's Wall</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -119,7 +119,7 @@
                         </tr>
                     </tbody>
                 </table>
-                <form action="addWorkoutTEST.php">
+                <form action="addWorkoutHandler.php">
                     <button type="submit" class="btn btn-md btn-primary btn-block" name="save">Save Workout</button>
                 </form>
             </div>
