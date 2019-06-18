@@ -31,12 +31,6 @@
     </div>
     </nav>
 
-    <div class="container" id="alertSection">
-        <?php 
-            include 'addWorkoutTempHandler.php';
-        ?>
-    </div>
-
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container" id="home">
             <form action ="dashboardSearch.php" method="post">
@@ -71,6 +65,13 @@
             </div>
         </div>
     </nav>
+        
+    <div class="container" id="alertSection">
+        <?php 
+            include 'addWorkoutTempHandler.php';
+        ?>
+    </div>
+    
     <div class="container" id="addWorkout">
         <form class="form" id="form-workout" method="post">
             <div class="card" id="addWorkoutCard">
