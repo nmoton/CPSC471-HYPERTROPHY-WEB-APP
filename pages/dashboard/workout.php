@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <title>Hypertrophy - Workout List</title>
+    <title>Hypertrophy - View Workout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -19,7 +19,7 @@
         <div class="container">
         <ul class="navbar-nav" id="back">
             <li class="nav-item active">
-                <i class="fas fa-arrow-circle-left fa-2x"></i>
+                <a href="dashboard.php"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
             </li>
         </ul>
         <ul class="navbar-nav mx-auto">
@@ -32,28 +32,36 @@
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container" id="home">
-            <div class="input-group md-form form-sm form-2 pl-0" id="search">
-                <input class="form-control my-0 py-1" type="text" placeholder="Search Users" aria-label="Search">
-                <div class="input-group-append">
-                    <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
+            <form action ="dashboardSearch.php" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control my-0 py-1" placeholder="Search User" aria-label="Search User" aria-describedby="basic-addon2" id="seach" name="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" id="navbarButton"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
+                    </div>
                 </div>
-            </div>
+            </form>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <u1 class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#what">Community Wall</a>
+                        <a class="nav-link text-white" href="addWorkout.php">New Workout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#help">Personal Wall</a>
+                        <a class="nav-link text-white" href="workoutList.php">Workout List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="pages/signup.html">Account Settings</a>
+                        <a class="nav-link text-white" href="dashboard.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="pages/login.html">Log Out</a>
+                        <a class="nav-link text-white" href="personalWall.php">Personal Wall</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="settings.php">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../../index.html">Log Out</a>
                     </li>
                 </u1>
             </div>

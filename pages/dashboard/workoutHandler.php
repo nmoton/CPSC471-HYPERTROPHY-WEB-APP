@@ -8,7 +8,7 @@ $db = mysqli_connect('localhost', 'root', '', '471proj');
 //for logging in users 
   $workoutID = mysqli_real_escape_string($db, $_POST['workout']);
 
-  $searchQuery = "SELECT workoutListID_fk, wMonth, wDay, wYear, wTime, privacy, wDesc, userID, fname, lname, bAge FROM workout, standard_user, user WHERE workoutID = '$workoutID' AND workoutListID_fk = workoutListID AND userID_fk = userID";
+  $searchQuery = "SELECT workout.workoutListID_fk, wMonth, wDay, wYear, wTime, privacy, wDesc, userID, fname, lname, bAge, gender FROM workout, standard_user, user WHERE workout.workoutID = '$workoutID' AND workout.workoutListID_fk = standard_user.workoutListID_fk AND standard_user.userID_fk = user.userID";
   $result = mysqli_query($db, $searchQuery);
   $workoutInfo = mysqli_fetch_assoc($result);
 
@@ -21,7 +21,7 @@ $db = mysqli_connect('localhost', 'root', '', '471proj');
               echo '</div>';
                 echo '<div class="user-about" id="user-about">';
                     echo '<p><strong>User ID: </strong> #' . $workoutInfo['userID'] . '</p>';
-                    echo '<p><strong>Gender:</strong> GENDER</p>';
+                    echo '<p><strong>Gender:</strong> ' . $workoutInfo['gender'] . '</p>';
                     echo '<p><strong>Age: </strong>' . $workoutInfo['bAge'] . 'Years Old</p>';
                 echo '</div>';
                 echo '<hr>';
