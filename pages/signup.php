@@ -22,7 +22,7 @@
 				<h2 class="temp-logo-holder text-center">Hypertrophy Logo</h2>
 				<h2 class="form-signin-heading text-center">Create your Hypertrophy Account</h2>
 				<?php 
-					include '../pages/userHandler.php';
+					include 'userHandler.php';
 				?>
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">

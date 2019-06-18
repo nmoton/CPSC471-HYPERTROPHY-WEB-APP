@@ -18,8 +18,7 @@
 		<div class="wrapper">
 			<form class="form-signin" method="post">
 				<?php 
-					include '../pages/userHandler.php';
-					include '../errors/errors.php'; 
+					include 'userHandler.php';
 				?>
 				<h2 class="temp-logo-holder text-center">Hypertrophy Logo</h2>
 				<h2 class="form-signin-heading text-center">Welcome Back</h2>
