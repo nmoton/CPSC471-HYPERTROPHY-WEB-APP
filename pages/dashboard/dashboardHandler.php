@@ -3,7 +3,7 @@
 $db = mysqli_connect('localhost', 'root', '', '471proj');
 
 //Complete an SQL query that finds all public workouts stored in the database
-$searchQuery = "SELECT fname, lname, userID, wMonth, wDay, wYear, wTime, workoutID FROM workout, standard_user, user WHERE privacy = 'public' AND workoutListID_fk = workoutListID AND userID_fk = userID ORDER BY workoutID DESC";
+$searchQuery = "SELECT fname, lname, userID, wMonth, wDay, wYear, wTime, workoutID FROM workout, standard_user, user WHERE privacy = 'public' AND workout.workoutListID_fk = standard_user.workoutListID_fk AND userID_fk = userID ORDER BY workoutID DESC";
 $result = mysqli_query($db, $searchQuery);
 
 
