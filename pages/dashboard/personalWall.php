@@ -2,7 +2,7 @@
 
 <html lang="en">
 <head>
-    <title>Hypertrophy - The New Social Media Community For Gym-Goers</title>
+    <title>Hypertrophy - User Wall</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
@@ -19,88 +19,59 @@
         <div class="container">
         <ul class="navbar-nav" id="back">
             <li class="nav-item active">
-                <i class="fas fa-arrow-circle-left fa-2x"></i>
+                <a href="dashboard.php"><i class="fas fa-arrow-circle-left fa-2x"></i></a>
             </li>
         </ul>
         <ul class="navbar-nav mx-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="#">Nathan Moton's Wall</a>
+                <a class="nav-link" href="#">User's Wall</a>
             </li>
         </ul>
-    </div>
+        </div>
     </nav>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
         <div class="container" id="home">
-            <div class="input-group md-form form-sm form-2 pl-0" id="search">
-                <input class="form-control my-0 py-1" type="text" placeholder="Search Users" aria-label="Search">
-                <div class="input-group-append">
-                    <span class="input-group-text lighten-2" id="basic-text1"><i class="fas fa-search text-grey" aria-hidden="true"></i></span>
+            <form action ="dashboardSearch.php" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control my-0 py-1" placeholder="Search User" aria-label="Search User" aria-describedby="basic-addon2" id="seach" name="search">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="submit" id="navbarButton"><i class="fas fa-search text-grey" aria-hidden="true"></i></button>
+                    </div>
                 </div>
-            </div>
+            </form>
             <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <u1 class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#what">Community Wall</a>
+                        <a class="nav-link text-white" href="addWorkout.php">New Workout</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#help">Workout List</a>
+                        <a class="nav-link text-white" href="workoutList.php">Workout List</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="pages/signup.html">Account Settings</a>
+                        <a class="nav-link text-white" href="dashboard.php">Dashboard</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="pages/login.html">Log Out</a>
+                        <a class="nav-link text-white" href="personalWall.php">Personal Wall</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="settings.php">Settings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../../index.html">Log Out</a>
                     </li>
                 </u1>
             </div>
         </div>
     </nav>
 
-    <div class="container" id="user-banner">
-        <div class="container" id="banner-info">
-            <div class="card">
-                <h5 class="card-header">User Profile</h5>
-                <div class="card-body">
-                    <div class="user-name" id="user-name">
-                        <h5>Nathan Moton</h5>
-                    </div>
-                    <div class="user-about" id="user-about">
-                        <p><strong>User ID: </strong> #0001</p>
-                        <p><strong>Gender:</strong> Male</p>
-                        <p><strong>Age:</strong> 21 Years Old</p>
-                    </div>
-                    <hr>
-                    <div class="user-social" id="user-social">
-                        <button type="button" class="btn btn-fb"><i class="fab fa-facebook-f pr-1"></i> Facebook</button>
-                        <button type="button" class="btn btn-tw"><i class="fab fa-twitter pr-1"></i> Twitter</button>
-                        <button type="button" class="btn btn-ins"><i class="fab fa-instagram pr-1"></i> Instagram</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php 
+        include 'personalWallHandler.php';
+    ?>
 
-    <div class="container" id="profile-post-area">
-        <div class="container" id="profile-post">
-            <div class="card">
-                <div class="card-header">
-                    <h5>Nathan Moton</h5>
-                    <h6>UID: #0001</h6>
-                </div>
-                <div class="card-body">
-                    <div class="text-muted h7 mb-2"> 
-                        <i class="fa fa-clock-o"></i>2 hours ago
-                    </div>
-                    <p class="card-text">Nathan has just completed a workout.</p>
-                    <button type="button" class="btn primary">View Workout</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
