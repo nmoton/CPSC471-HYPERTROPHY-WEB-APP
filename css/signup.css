@@ -47,7 +47,7 @@
 		padding-bottom: 15px;
 	}
 
-	.form-signin input[type="text"], .form-signin input[type="password"] {
+	.form-signin input {
 		margin-bottom: 20px;
 	}
 
@@ -93,7 +93,7 @@
 		padding-bottom: 15px;
 	}
 
-	.form-signin input[type="text"], .form-signin input[type="password"] {
+	.form-signin input {
 		margin-bottom: 20px;
 	}
 
