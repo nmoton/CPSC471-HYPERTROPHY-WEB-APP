@@ -1,8 +1,8 @@
-#changePasswordCard {
+#addWorkoutCard {
 	margin-bottom: 25px;
 }
 
-#form-password.form-password input {
+#form-workout.form input {
 	margin-bottom: 15px;
 }
 
@@ -10,11 +10,7 @@
 	margin-bottom: 15px;
 }
 
-#changePasswordCard form {
-	width: 100%;
-}
-
-#addSocialMediaCard form {
+form#form-workout.form {
 	width: 100%;
 }
 

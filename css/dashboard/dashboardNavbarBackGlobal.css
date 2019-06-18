@@ -13,3 +13,7 @@
 #back {
 	position: absolute;
 }
+
+#back a {
+	text-decoration: none;
+}

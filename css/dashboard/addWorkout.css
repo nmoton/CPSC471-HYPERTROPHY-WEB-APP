@@ -15,6 +15,14 @@
 	margin-bottom: 15px;
 }
 
+#form-exercise.form-exercise form {
+	width: 100%;
+}
+
 #workoutTableCard button {
 	margin-top: 15px;
+}
+
+.form {
+	width: 100%;
 }
