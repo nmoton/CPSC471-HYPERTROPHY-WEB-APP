@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <u1 class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="addWorkout.php">New Workout</a>
+                        <a class="nav-link text-white" href="addWorkoutTemp.php">New Workout</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="workoutList.php">Workout List</a>
