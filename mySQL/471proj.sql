@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 17, 2019 at 03:12 AM
--- Server version: 10.1.40-MariaDB
--- PHP Version: 7.3.5
+-- Host: localhost
+-- Generation Time: Jun 21, 2019 at 05:03 AM
+-- Server version: 10.3.15-MariaDB
+-- PHP Version: 7.1.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -58,8 +58,6 @@ CREATE TABLE `exercise` (
   `weight` int(11) NOT NULL,
   `workoutID_fk` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
 
 --
 -- Table structure for table `personal_record`
@@ -265,7 +263,7 @@ ALTER TABLE `workout_list`
 -- AUTO_INCREMENT for table `exercise`
 --
 ALTER TABLE `exercise`
-  MODIFY `exerciseID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `exerciseID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `personal_record`
@@ -277,7 +275,7 @@ ALTER TABLE `personal_record`
 -- AUTO_INCREMENT for table `personal_wall`
 --
 ALTER TABLE `personal_wall`
-  MODIFY `personalWallID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `personalWallID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `post`
@@ -289,25 +287,25 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `pr_list`
 --
 ALTER TABLE `pr_list`
-  MODIFY `prListID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `prListID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `userID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `workout`
 --
 ALTER TABLE `workout`
-  MODIFY `workoutID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `workoutID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `workout_list`
 --
 ALTER TABLE `workout_list`
-  MODIFY `workoutListID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `workoutListID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables
@@ -317,70 +315,70 @@ ALTER TABLE `workout_list`
 -- Constraints for table `admin`
 --
 ALTER TABLE `admin`
-  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `community_wall`
 --
 ALTER TABLE `community_wall`
-  ADD CONSTRAINT `community_wall_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `community_wall_ibfk_2` FOREIGN KEY (`postID_fk`) REFERENCES `post` (`postID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `community_wall_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `community_wall_ibfk_2` FOREIGN KEY (`postID_fk`) REFERENCES `post` (`postID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `exercise`
 --
 ALTER TABLE `exercise`
-  ADD CONSTRAINT `exercise_ibfk_1` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `exercise_ibfk_1` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `personal_record`
 --
 ALTER TABLE `personal_record`
-  ADD CONSTRAINT `personal_record_ibfk_1` FOREIGN KEY (`exerciseID_fk`) REFERENCES `exercise` (`exerciseID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `personal_record_ibfk_2` FOREIGN KEY (`prListID_fk`) REFERENCES `pr_list` (`prListID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `personal_record_ibfk_3` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `personal_record_ibfk_1` FOREIGN KEY (`exerciseID_fk`) REFERENCES `exercise` (`exerciseID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `personal_record_ibfk_2` FOREIGN KEY (`prListID_fk`) REFERENCES `pr_list` (`prListID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `personal_record_ibfk_3` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `personal_wall`
 --
 ALTER TABLE `personal_wall`
-  ADD CONSTRAINT `personal_wall_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `personal_wall_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `post`
 --
 ALTER TABLE `post`
-  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `post_ibfk_2` FOREIGN KEY (`personalRecordID_fk`) REFERENCES `personal_record` (`personalRecordID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `post_ibfk_3` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `post_ibfk_4` FOREIGN KEY (`personalWallID_fk`) REFERENCES `personal_wall` (`personalWallID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_ibfk_2` FOREIGN KEY (`personalRecordID_fk`) REFERENCES `personal_record` (`personalRecordID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_ibfk_3` FOREIGN KEY (`workoutID_fk`) REFERENCES `workout` (`workoutID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `post_ibfk_4` FOREIGN KEY (`personalWallID_fk`) REFERENCES `personal_wall` (`personalWallID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `pr_list`
 --
 ALTER TABLE `pr_list`
-  ADD CONSTRAINT `pr_list_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `pr_list_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `standard_user`
 --
 ALTER TABLE `standard_user`
-  ADD CONSTRAINT `standard_user_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `standard_user_ibfk_2` FOREIGN KEY (`personalWallID_fk`) REFERENCES `personal_wall` (`personalWallID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `standard_user_ibfk_3` FOREIGN KEY (`prListID_fk`) REFERENCES `pr_list` (`prListID`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `standard_user_ibfk_4` FOREIGN KEY (`workoutListID_fk`) REFERENCES `workout_list` (`workoutListID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `standard_user_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `standard_user_ibfk_2` FOREIGN KEY (`personalWallID_fk`) REFERENCES `personal_wall` (`personalWallID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `standard_user_ibfk_3` FOREIGN KEY (`prListID_fk`) REFERENCES `pr_list` (`prListID`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `standard_user_ibfk_4` FOREIGN KEY (`workoutListID_fk`) REFERENCES `workout_list` (`workoutListID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `workout`
 --
 ALTER TABLE `workout`
-  ADD CONSTRAINT `workout_ibfk_1` FOREIGN KEY (`workoutListID_fk`) REFERENCES `workout_list` (`workoutListID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `workout_ibfk_1` FOREIGN KEY (`workoutListID_fk`) REFERENCES `workout_list` (`workoutListID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `workout_list`
 --
 ALTER TABLE `workout_list`
-  ADD CONSTRAINT `workout_list_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `workout_list_ibfk_1` FOREIGN KEY (`userID_fk`) REFERENCES `user` (`userID`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
