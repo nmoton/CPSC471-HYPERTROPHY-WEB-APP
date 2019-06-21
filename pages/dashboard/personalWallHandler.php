@@ -42,7 +42,7 @@ if(isset($_POST["profile"])){
                         }
                         if(!empty($profileInfo['instagram'])){
                             $instagram = $profileInfo['instagram'];
-                            echo '<a href="https://instagram.com/' . $instagram .'""><button type="button" class="btn btn-fb"><i class="fab fa-facebook-f pr-1"></i> Instagram </button></a>';
+                            echo '<a href="https://instagram.com/' . $instagram .'""><button type="button" class="btn btn-ig"><i class="fab fa-instagram-f pr-1"></i> Instagram </button></a>';
                         }
                         echo '</div>';
                     }
@@ -51,7 +51,7 @@ if(isset($_POST["profile"])){
         echo '</div>';
     echo '</div>';
 
-$searchQuery = "SELECT fname, lname, userID, wMonth, wDay, wYear, wTime, workoutID FROM workout, standard_user, user WHERE standard_user.userID_fk = '$userID' AND standard_user.workoutListID_fk = workout.workoutListID_fk AND user.userID = standard_user.userID_fk ORDER BY workoutID DESC";
+$searchQuery = "SELECT fname, lname, userID, wMonth, wDay, wYear, wTime, workoutID FROM workout, standard_user, user WHERE standard_user.userID_fk = '$userID' AND standard_user.workoutListID_fk = workout.workoutListID_fk AND user.userID = standard_user.userID_fk AND workout.privacy = 'public'ORDER BY workoutID DESC";
 $result = mysqli_query($connect, $searchQuery);
 
 echo '<div class="container" id="profile-post-area">';
@@ -124,7 +124,7 @@ else {
         echo '</div>';
     echo '</div>';
 
-$searchQuery = "SELECT fname, lname, userID, wMonth, wDay, wYear, wTime, workoutID FROM workout, standard_user, user WHERE standard_user.userID_fk = '$userID' AND standard_user.workoutListID_fk = workout.workoutListID_fk AND user.userID = standard_user.userID_fk ORDER BY workoutID DESC";
+$searchQuery = "SELECT fname, lname, userID, wMonth, wDay, wYear, wTime, workoutID FROM workout, standard_user, user WHERE standard_user.userID_fk = '$userID' AND standard_user.workoutListID_fk = workout.workoutListID_fk AND user.userID = standard_user.userID_fk AND workout.privacy = 'public' ORDER BY workoutID DESC";
 $result = mysqli_query($connect, $searchQuery);
 
 echo '<div class="container" id="profile-post-area">';

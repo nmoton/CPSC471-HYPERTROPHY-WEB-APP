@@ -13,6 +13,7 @@
 		$password_check_query = "SELECT password FROM user WHERE userID = '$userID'";
 		$result = mysqli_query($db, $password_check_query);
 		$password = mysqli_fetch_assoc($result);
+		$passwordCheck = $password['password'];
 
 		//Server-side field error checks if client-side fail
 		if (empty($currentPassword)) {
@@ -27,7 +28,7 @@
 			echo '</div>';
 		}
 
-		if ($password == $currentPassword){
+		if ($passwordCheck == $currentPassword){
 			if (!empty($newPassword)) {
 				$query = "UPDATE user SET password = '$newPassword' WHERE userID = '$userID'";
 				$updatePassword = mysqli_query($db, $query);
